@@ -7,11 +7,23 @@ import city from './assets/city.jpg';
 import { Input } from './components/Input';
 import { DisplayTemp } from './components/DisplayTemp';
 import { useState } from 'react';
+import { convertTemp, getUnitToggle } from './utils/temperature';
+import { ConvertButton } from './components/ConvertButton';
 
 export default function App() {
 
   const [inputValue, setInputValue] = useState(0);
-  const [currentUnit, setCurrentUnit] = useState("°C")
+  const [currentUnit, setCurrentUnit] = useState("°C");
+
+  const toggleUnit = getUnitToggle(currentUnit);
+
+  function getConvertedTemp() {
+    if(isNaN(inputValue)) {
+      return "";
+    } else {
+      return convertTemp(inputValue, toggleUnit).toFixed(1);
+    }
+  }
 
   return (
     <ImageBackground 
@@ -24,8 +36,8 @@ export default function App() {
           </View>
           <View>
             <DisplayTemp
-              temperature={inputValue}
-              unit={currentUnit}
+              temperature={getConvertedTemp()}
+              unit={toggleUnit}
             />
           </View>
           <View>
@@ -36,7 +48,10 @@ export default function App() {
               />
           </View>
           <View>
-            <Text>Convert</Text>
+            <ConvertButton
+              unit={currentUnit}
+              onPress={() => setCurrentUnit(toggleUnit)}
+            />
           </View>
         </SafeAreaView>
       </SafeAreaProvider>

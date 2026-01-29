@@ -4,7 +4,7 @@ import { styles } from "./Header.style";
 export const Header = () => {
     return (
         <>
-            <View>
+            <View style={styles.header}>
                 <Text style={styles.title}>Weather app</Text>
             </View>
         </>

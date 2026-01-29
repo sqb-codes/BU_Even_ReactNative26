@@ -5,9 +5,6 @@ export const styles = StyleSheet.create({
         flex: 1,
         justifyContent: "space-evenly"
     },
-    wrapper: {
-
-    },
     title: {
         fontSize: 30,
         color: "white",

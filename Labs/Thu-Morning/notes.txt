@@ -1,0 +1,8 @@
+1. Download and install expo go app in mobile
+2. npm install expo-cli --global
+3. npx create-expo-app my-first-app --template blank
+4. cd my-first-app
+5. npm start
+
+Install safe area provider and view:
+npm install react-native-safe-area-context

@@ -2,7 +2,8 @@ import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
     wrapper: {
-        alignItems: 'center'
+        alignItems: 'center',
+        marginBottom: 15
     },
   logo: {
     width: 100,

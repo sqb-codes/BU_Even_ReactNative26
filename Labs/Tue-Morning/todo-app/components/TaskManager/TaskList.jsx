@@ -9,7 +9,7 @@ export const TaskList = ({ tasks }) => {
             <TaskCard task={tasks[2]}/> */}
             {
                 tasks.map((task) => (
-                    <TaskCard key={task.id} task={task}/>
+                    <TaskCard key={task.taskId} task={task}/>
                 ))
             }
         </View>

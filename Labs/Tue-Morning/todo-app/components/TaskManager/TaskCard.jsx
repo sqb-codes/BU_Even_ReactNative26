@@ -11,7 +11,12 @@ export const TaskCard = ({ task }) => {
                         {textDecorationLine: "line-through"}
                     ]}
                 >
-                    {task.text}
+                    {task.taskText}
+                </Text>
+
+                <Text 
+                    style={styles.taskDesc}>
+                    {task.taskDescription}
                 </Text>
             </TouchableOpacity>
         </>

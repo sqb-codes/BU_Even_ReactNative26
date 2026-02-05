@@ -1,0 +1,86 @@
+AI for Developers
+
+AI Basics - AI / ML / DL / Gen AI / Agentic AI
+ML Concepts - Supervised / Unsupervised
+Deep Learning - Neural Networks, Activations, Backpropagation
+LLMs & Transformers - Tokenization, Self-attention
+
+Core Programming
+- Python
+- JS / TS - for front-end AI integration
+
+Machine Learning Basics - Skip
+
+LLMs - Must have
+- LLM power modern AI applications - code, chatbots, assistants, agents
+
+Tools / Platforms:
+Model Provider - Open AI, Anthropic, Gemini, Meta LLaMA
+APIs & SDKs - Open AI API, Google Gen AI API
+Embeddings - Hugging Face
+Vector Databases - Pinecone, Weaviate
+Orchestration - LangChain, LlamaIndex
+
+
+Prompt Engineering
+Skills of Prompt Engineering:
+- Prompt design patterns
+- Chain-of-thoughts prompts
+- Prompt evaluation & optimization
+- Prompt versioning & testing
+
+Tools:
+- LangChain/LlamaIndex
+- Prompting Tools
+- PromptOps frameworks
+
+
+LLM Engineering & Deployment
+Model Hosting - Replicate, Hugging face, AWS, Vertex AI
+Fine-Tuning - Open AI Fine Tuning
+API Management - Fast API, Flask, Django
+Containerization - Docker
+Orchestration - Kubernetes
+
+
+RAG - Retrieval Augmented Generation
+MCP - Model Context Protocol
+
+AI Agents & Automation
+AI for Application Development
+=======================================
+
+LLMs
+- LLM is a neural network trained to predict the next token based on previous token
+We need to understand how tokens flow through the model...
+
+msg = Hello how are you
+tokens -> ["hello", "how", "are", "you"]
+
+Think of LLM as:
+- that takes input tokens
+- runs through a very large mathematical pipeline
+- and returns probabilities of next token
+
+Tokens: The core unit
+Cost = number of tokens
+Context length = max tokens
+Performance = token efficiency
+
+pipeline: text -> Tokenizer -> Embeddings -> Transformer Layers -> Output probabilities
+
+Token: Input is split into tokens
+Embeddings: Each token is converted into a vector (number)
+Transformer Layer: Self attention + Feed forward + Residual Connections + Layer Normalization
+
+Self-attention:
+Which previous tokens are important for the current token...
+
+
+============================================
+
+First mini applications
+npm init -y
+npm install express dotenv @google/generative-ai
+
+

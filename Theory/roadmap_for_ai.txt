@@ -83,4 +83,106 @@ First mini applications
 npm init -y
 npm install express dotenv @google/generative-ai
 
+============================================
+
+RAG
+
+Core Problem with LLMs
+1. Trained on static data
+2. Not aware of private data
+3. Can hallucinate
+4. Can't access real-time updates
+
+This is where RAG comes into the picture
+
+Example: Square Brackets / Xebia
+Company has:
+- HR Policies
+- Course curriculums PDFs
+- Internal documentation
+- Student records
+- Pricing models
+
+With RAG:
+- Search your company documents
+- Retrievs the exact refund policy paragraph
+- Generates an answer strictly based on that
+
+
+Then what exactly RAG is:
+RAG - Retrieval Augmented Generation
+- Combines information retrieval(searching documents) with text generation (LLM) to produce grounded, context-aware responses
+
+
+Traditional LLM:
+Question -> LLM -> answer
+
+RAG Systems:
+Question -> 
+Convert to Embeddings -> 
+Search vector databases -> 
+Retrieve relevant chunks -> 
+Pass retrieved context + question to LLM -> 
+Generate grounded answer
+
+
+Step by Step Working
+Step-1: Document Ingestion
+- PDFs, DB data, APIs
+- Clean text
+- Split into chunks
+
+Step-2: Embedding
+- Each chunk is converted into a vector
+
+"This is our refund policy"
+[0.012, 0.87, -0.34]
+
+Because vectors allow semantic similarity searching
+
+
+Step-3: Store in Vector Databases
+{
+    embedding: [vector],
+    text: "orginal chunk",
+    metadata: {source: "policy.pdf"}
+}
+
+
+Step-4: User will query:
+User input: "What is the refund policy of my batch?"
+
+RAG:
+1. Convert query to embedding
+2. Search similar vectors
+3. Retrieve top-k relevant chunks
+
+
+Step-5: Prompt Construction
+We send this to LLM:
+
+"answer only using the context below:
+Context: [retrieved text chunks]
+
+Question:
+"What is the refund policy of my batch?"
+
+
+Step-6: Grounded answer
+LLM now:
+- does not rely on training memory
+- uses retrieved documents
+- produces contextual answer
+
+
+RAG works using:
+Cosine similarity
+
+similarity = (A.B) / (|A||B|)
+A = query vector
+B = document vector
+
+highest similarity score -> most relevant document
+
+
 

@@ -1,8 +1,8 @@
 import express from "express";
 import dotenv from "dotenv";
-import ragRoutes from "./routes/ragRoutes";
+import ragRoutes from "./routes/ragRoutes.js";
 
-dotenv.config()
+dotenv.config();
 
 const app = express();
 app.use(express.json());

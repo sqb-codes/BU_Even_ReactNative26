@@ -23,6 +23,10 @@ export default function App() {
     console.log("Task Added :",taskList);
   }
 
+  const deleteTask = (id) => {
+    setTaskList(taskList.filter((task) => task.taskId !== id));
+  }
+
   return (
     <>
       <SafeAreaProvider>
@@ -46,7 +50,10 @@ export default function App() {
             <TaskList task={TASKS[2]} /> */}
             {/* <TaskList tasks={TASKS}/> */}
             <ScrollView>
-              <TaskList tasks={taskList}/>
+              <TaskList 
+                tasks={taskList}
+                onDelete={deleteTask}
+                />
             </ScrollView>
           </View>
         </SafeAreaView>

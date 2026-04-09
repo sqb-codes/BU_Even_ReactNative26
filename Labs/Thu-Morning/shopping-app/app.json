@@ -1,0 +1,39 @@
+{
+  "expo": {
+    "name": "shopping-app",
+    "slug": "shopping-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "config": {
+        "firebase": {
+          "apiKey": "AIzaSyAVA7zZY-v6aFBihvFWJiOZhtJWS4YXdcc",
+          "authDomain": "shopping-base-6dbad.firebaseapp.com",
+          "projectId": "shopping-base-6dbad",
+          "storageBucket": "shopping-base-6dbad.firebasestorage.app",
+          "messagingSenderId": "984482229935",
+          "appId": "1:984482229935:web:d7b7e2d04a4118193fee5a"
+        }
+      }
+    }
+  }
+}
